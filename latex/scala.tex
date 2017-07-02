@@ -1,0 +1,39 @@
+\documentclass[a4paper,9pt,twoside]{book}
+
+\usepackage[cm]{fullpage}
+\usepackage[hidelinks,
+  pdfauthor={Meili Mario, Morgner Felix},
+  pdftitle={Advanced Programming Paradigms --- Scala Code},
+  pdfsubject={MSE},
+  pdfkeywords={scala;functional programming;advprpa}
+]{hyperref}
+\usepackage[outputdir=.build]{minted}
+\newcommand{\scalafile}[1]{\inputminted[breaklines]{scala}{../scala/#1.scala}}
+
+
+\title{%
+Advanced Programming Paradigms\\
+\normalsize{Scala Code}
+}
+\author{%
+  Meili, Mario\\
+  \and
+  Morgner, Felix
+}
+
+\begin{document}
+
+\maketitle{}
+\tableofcontents{}
+
+\chapter{IML Interpreter}
+\section{Abstract Syntax}
+\scalafile{parser/Syntax}
+\section{Parser}
+\scalafile{parser/IMLParser}
+\section{Interpreter}
+\scalafile{parser/Interpreter}
+\section{Application}
+\scalafile{parser/Test}
+
+\end{document}
