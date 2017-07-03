@@ -56,4 +56,16 @@ object RepParser extends RegexParsers {
  * auf ein ParseResult[List[T]] zu parsen. Aus diesem ParseResult ist ersichtlich,
  * ob das Parsen erfolgreich war und falls ja, kann man das Ergebnis mittels
  * get abholen.
+ * 
+ * Antwort Gruntz: Sehr geehrter Herr Meili,
+ * diese (Einleitungs)-Frage gab ja auch nur 1 Punkt, und als Resultat habe
+ * ich tatsächlich
+ *
+ *     Input => ParseResult[List[T]]
+ *
+ * erwartet wie sie das auch geschrieben haben, und als Verwendugszweck hatte
+ * ich mir notiert:
+ *
+ *     Diese Methode wird verwendet um einen Input-Strom in ein Resultat zu
+ *     konvertieren. Das Resultat ist eine Liste.
  */
