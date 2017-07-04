@@ -30,11 +30,10 @@ object RepParser extends RegexParsers {
      */
         
     def grepN[T](n: Int, p: Parser[T]): Parser[List[T]] =
-        if(n > 0) {
-            return p~grepN(n - 1, p) ^^ { case x~xs => x :: xs }
-        } else {
+        if (n > 0)
+            p ~ grepN(n - 1, p) ^^ { case x ~ xs => x :: xs }
+        else
             success(List())
-        }
     
     def main(args: Array[String]) {
         val g = "GGGGGG"
